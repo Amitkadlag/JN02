@@ -1,3 +1,4 @@
+//CPP program to demostrate the implementation of stack
 #include <iostream>
 #define size 10
 using namespace std;
