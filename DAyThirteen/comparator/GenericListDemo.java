@@ -9,7 +9,7 @@ public class GenericListDemo {
 	public static void main(String[] args) {
 		List<Student> studentList=new ArrayList<Student>();
 		//studentList.add("Aniket");
-		studentList.add(new Student(1,"Dhruv",68));
+		studentList.add(new Student(1,"Amit",68));
 		studentList.add(new Student(4,"Aniket",65));
 		studentList.add(new Student(2,"Meet",74));
 		studentList.add(new Student(5,"Sanket",69));
