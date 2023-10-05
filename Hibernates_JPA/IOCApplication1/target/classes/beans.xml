@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+  http://www.springframework.org/schema/context/spring-context.xsd">
+  
+<bean id="hw" class="com.tns.ioc.HelloWorld">
+</bean>
+
+<bean id="e1" class="com.tns.ioc1.Employee">
+<property name="empId" value="101"></property>
+<property name="empName" value="Amol"></property>
+<property name="skills">
+<list>
+<value>Programming Languages - C, C++, Java</value>
+<value>Database - Oracle, MySql</value>
+<value>Communication Skills</value>
+</list>
+</property>
+</bean>
+
+<bean id="e2" class="com.tns.ioc1.Employee">
+<property name="empId" value="102"></property>
+<property name="empName" value="Abhijeet"></property>
+<property name="skills">
+<list>
+<value>Programming Languages - C, C++, Java</value>
+<value>Database - Oracle, MySql</value>
+<value>Communication Skills</value>
+<value>SAP</value>
+</list>
+</property>
+</bean>
+
+<bean name="department" class="com.tns.autowiring.Department">
+<property name="id" value="10"></property>
+<property name="name" value="Account"></property>
+</bean>
+
+<bean name="emp" class="com.tns.autowiring.Employee" autowire="byName">
+<property name="id" value="101"></property>
+<property name="name" value="Rohit"></property>
+</bean>
+
+<context:component-scan base-package="com.tns.autowiring1"></context:component-scan>
+<bean id="a1" class="com.tns.autowiring1.Address" init-method="init" destroy-method="destroy"></bean>
+<bean id="a3" class="com.tns.autowiring1.Address2"></bean>
+<bean id="a2" class="com.tns.autowiring1.Address1"></bean>
+
+
+</beans>
